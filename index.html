@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="t">
+        <h1>IDAN COLLEGE OF SQI</h1>
+    </div>
+
+    <div class="tol">
+        <a href="home">HOME</a>
+    </div>
+
+    <div class="to">
+        <a href="about">ABOUT US</a>
+    </div>
+
+    <div class="ta">
+        <h1>CHECK YOUR GRADE</h1>
+    </div>
+
+    <div class="ope">
+        <form action="">
+            <label for="surnme">Surname</label>
+            <input type="text"><br><br>
+            <label for="first">First Name</label>
+            <input type="text">
+        </form>
+    </div>
+
+
+<div class="an">
+    <input type="number" id="scoreOfUser" placeholder="Enter your score">
+    <button onclick="check()">Check</button>
+    <div id="show">Idan Score</div>
+    <!-- <button onclick="playMusic()">Play Music</button> -->
+</div>
+
+<script>
+    var portableSong = new Audio("Audio/Portable.mp3")
+    function playMusic () {
+        portableSong.play()
+    }
+    var seyiSong = new Audio("Audio/Seyi.mp3")
+    function playMusic () {
+        seyiSong.play()
+    }
+    var asakeSong = new Audio("Audio/Asake.mp3")
+    function playMusic () {
+        asakeSong.play()
+    }
+    var qdotSong = new Audio("Audio/Qdot.mp3")
+        function playMusic () {
+          qdotSong.play()  
+        }
+        var davidoSong = new Audio("Audio/Davido.mp3")
+        function playMusic () {
+            davidoSong.play()
+        }
+
+    function check () {
+        if (scoreOfUser.value >= 0 && scoreOfUser.value <= 39) {
+            console.log("fail");
+            show.innerHTML = "Fail"
+            portableSong.play()
+        }
+        if (scoreOfUser.value >= 40 && scoreOfUser.value <= 49) {
+            console.log("pass");
+            show.innerHTML = "Pass"
+            seyiSong.play()
+        }
+        if (scoreOfUser.value >= 50 && scoreOfUser.value <= 59) {
+            console.log("Credit");
+            show.innerHTML = "Credit"
+            asakeSong.play()
+        }
+        if (scoreOfUser.value >= 60 && scoreOfUser.value <= 69) {
+            console.log("Good");
+            show.innerHTML = "Good"
+            qdotSong.play()
+        }
+        if (scoreOfUser.value >= 70 && scoreOfUser.value <= 100) {
+            console.log("Excellent");
+            show.innerHTML = "Execellent"
+            davidoSong.play()
+        }
+        }
+</script>
+</html>
